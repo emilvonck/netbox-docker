@@ -40,7 +40,7 @@ EOF
 ```
 
 Below command will start netbox, populate it with data.
-The default superuser has admin/admin.
+The default superuser is admin/admin.
 ```bash
 make deploy
 ```
