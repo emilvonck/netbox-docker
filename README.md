@@ -30,9 +30,17 @@ please join [our Slack][netbox-docker-slack] and ask for help in the [`#netbox-d
 To get _NetBox Docker_ up and running run the following commands.
 There is a more complete [_Getting Started_ guide on our wiki][wiki-getting-started] which explains every step.
 
+```bash
+tee docker-compose.override.yml <<EOF
+services:
+  netbox:
+    ports:
+      - 8000:8080
+EOF
+```
+
 Below command will start netbox, populate it with data.
 The default superuser has admin/admin.
-
 ```bash
 make deploy
 ```
