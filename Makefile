@@ -1,6 +1,6 @@
 # Makefile
 
-.PHONY: all start deploy load-data destroy-data stop kill
+.PHONY: all start deploy load-data destroy-data stop destroys
 
 all: start
 
@@ -24,5 +24,5 @@ destroy-data:
 stop:
 	docker compose down
 
-kill:
+destroy:
 	docker compose down -v
